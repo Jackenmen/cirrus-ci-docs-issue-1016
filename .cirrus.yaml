@@ -1,6 +1,6 @@
 env:
-  TASKS_TO_RUN: "windows"
-only_if: $TASKS_TO_RUN == '' || $TASKS_TO_RUN =~ $CIRRUS_TASK_NAME
+  TASKS_TO_RUN: "windows|linux"
+only_if: $TASKS_TO_RUN == '' || $CIRRUS_TASK_NAME =~ $TASKS_TO_RUN
 
 linux_task:
   container:
