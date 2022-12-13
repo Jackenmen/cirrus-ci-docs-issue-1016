@@ -1,6 +1,8 @@
 env:
-  TASKS_TO_RUN: "windo"
-only_if: $TASKS_TO_RUN == '' || $CIRRUS_TASK_NAME =~ $TASKS_TO_RUN
+  TASKS_TO_RUN: "$."
+  TASKS_TO_SKIP: ".*"
+only_if: $CIRRUS_TASK_NAME =~ $TASKS_TO_RUN
+skip: $CIRRUS_TASK_NAME =~ $TASKS_TO_SKIP
 
 linux_task:
   container:
