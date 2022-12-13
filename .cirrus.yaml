@@ -1,5 +1,5 @@
 env:
-  TASKS_TO_SKIP: ".*"
+  TASKS_TO_SKIP: ".+"
 skip: $CIRRUS_TASK_NAME =~ $TASKS_TO_SKIP
 
 linux_task:
