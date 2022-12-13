@@ -1,0 +1,15 @@
+env:
+  TASKS_TO_RUN: windows
+only_if: $TASKS_TO_RUN == '$CIRRUS_TASK_NAME'
+
+linux_task:
+  container:
+    image: ubuntu:latest
+  script:
+    - echo hello
+
+windows_task:
+  windows_container:
+    image: cirrusci/windowsservercore:2019
+  script:
+    - echo hello
