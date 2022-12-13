@@ -1,6 +1,4 @@
-env:
-  TASKS_TO_SKIP: ".+"
-skip: $CIRRUS_TASK_NAME =~ '.+'
+only_if: $CIRRUS_TASK_NAME =~ ''
 
 linux_task:
   container:
