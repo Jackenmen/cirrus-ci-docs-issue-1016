@@ -1,5 +1,5 @@
 env:
-  TASKS_TO_RUN: "windows"
+  TASKS_TO_RUN: "windo"
 only_if: $TASKS_TO_RUN == '' || $CIRRUS_TASK_NAME =~ $TASKS_TO_RUN
 
 linux_task:
