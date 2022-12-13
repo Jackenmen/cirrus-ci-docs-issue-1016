@@ -1,6 +1,6 @@
 env:
   TASKS_TO_RUN: "$."
-  TASKS_TO_SKIP: ".*"
+  TASKS_TO_SKIP: "windows"
 only_if: $CIRRUS_TASK_NAME =~ $TASKS_TO_RUN
 skip: $CIRRUS_TASK_NAME =~ $TASKS_TO_SKIP
 
